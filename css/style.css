@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    height: 100vh;
+    background-image: radial-gradient(rgba(14, 9, 56, 0.993),rgb(16, 20, 56));
+}
+#game{
+    width:360px;
+    height: 600px;
+    border:2px solid black;
+    margin: auto;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+}
+
+#left,#right{
+    width: 50%;
+    position: absolute;
+    height: 600px;
+}
+#right{
+    left: 50%;
+}
+#character{
+    width: 90px;
+    height: 100px;
+    background-image: linear-gradient(to bottom,rgba(253, 146, 6, 0.952), white 50%,rgba(65, 235, 13, 0.952));
+    position: absolute;
+    top:500px;
+    left: 90px;
+}
+#block{
+    width: 90px;
+    height: 100px;
+    background-color: rgb(41, 38, 38);
+    position: relative;
+    left: 0px;
+    animation: slide 0.75s linear infinite;
+    animation-delay: 2s;
+    z-index: 1000;
+}
+#blocked{
+    height: 100px;
+    width: 90px;
+    background-color: rgb(41, 38, 38);
+    position: relative;
+    left: 270px;
+    animation: glide 0.75s linear infinite;
+    animation-delay: 2s;
+
+}
+@keyframes slide{
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 600px;
+    }
+}
+@keyframes glide{
+    0%{
+        top: -100px;
+    }
+    100%{
+        top: 600px;
+    }
+}
